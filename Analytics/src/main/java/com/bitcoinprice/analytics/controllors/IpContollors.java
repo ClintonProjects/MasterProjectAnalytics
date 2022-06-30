@@ -87,7 +87,7 @@ public class IpContollors {
 		feedback.add(FeedbackService.getFeedback(id, index));
 		return feedback;
 	}
-
+//
 	@GetMapping("/getSatifcationRate/{id}")
 	public HashMap<String, Object> getSatifcationRatethrows(@PathVariable String id) throws Exception {
 		return FeedbackService.satifcationRate(id);

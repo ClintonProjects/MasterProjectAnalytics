@@ -1,27 +1,16 @@
 package com.bitcoinprice.analytics.services;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-import java.util.OptionalDouble;
-
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
-
 import com.bitcoinprice.analytics.repository.FeedbackRepository;
-import com.bitcoinprice.analytics.repository.UserLoginTable;
 import com.bitcoinprice.dataparsing.analytic.Feedback;
-import com.bitcoinprice.dataparsing.user.Login;
 
 @Service
 @ComponentScan({ "com.bitcoinprice", "com.bitcoinprice.repository" })
 public class FeedbackService {
-
-	@Autowired
-	private UserLoginTable UserLoginTable;
 
 	@Autowired
 	private FeedbackRepository FeedbackRepository;

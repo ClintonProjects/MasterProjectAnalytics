@@ -1,8 +1,5 @@
 package com.bitcoinprice.analytics.services;
 
-import java.util.Optional;
-
-import org.bson.types.ObjectId;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.stereotype.Service;
@@ -17,7 +14,7 @@ public class Auth {
 
 	@Autowired
 	private UserLoginTable UserLoginTable;
-//f
+
 	@Autowired
 	SessionIdTable sessionIdTable;
 

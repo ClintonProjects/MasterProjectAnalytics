@@ -57,8 +57,12 @@
 			<version>640f8b12af</version>
 		</dependency>
 
-
-
+		<dependency>
+			<groupId>com.github.ClintonProjects</groupId>
+			<artifactId>ApiCleaning</artifactId>
+			<version>640f8b12afw8</version>
+		</dependency>
+		
 
 		<!-- https://mvnrepository.com/artifact/io.springfox/springfox-swagger2 -->
 		<dependency>

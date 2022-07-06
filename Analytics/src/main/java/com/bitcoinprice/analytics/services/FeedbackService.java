@@ -1,5 +1,6 @@
 package com.bitcoinprice.analytics.services;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -72,9 +73,20 @@ public class FeedbackService {
 			satifcationRate.put("Good", okCount);
 			satifcationRate.put("Very Good", veryGoodCount);
 
-			List<Double> list = List.of(VeryUnhappyCount, unHappyCount, okCount, goodCount, veryGoodCount);
-			List<String> feedbackStuff = List.of("Very Unhappy", "Unhappy", "Ok", "Good", "Very Good");
-
+			ArrayList<Double> list = new ArrayList<Double>();						
+			list.add(VeryUnhappyCount);
+			list.add(unHappyCount);
+			list.add(okCount);
+			list.add(goodCount);
+			list.add(veryGoodCount);
+			
+			ArrayList<String> feedbackStuff = new ArrayList<String>();						
+			feedbackStuff.add("Very Unhappy");
+			feedbackStuff.add("Unhappy");
+			feedbackStuff.add("Ok");
+			feedbackStuff.add("Good");
+			feedbackStuff.add("Very Good");
+			
 			double highestValue = list.stream().mapToDouble(v -> v).max().orElse(0);
 			satifcationRate.put("MostCommon", feedbackStuff.get(list.indexOf(highestValue)));
 			satifcationRate.entrySet().stream().forEach(e -> System.out.println("Map: " + e));

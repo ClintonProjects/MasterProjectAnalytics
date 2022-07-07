@@ -40,7 +40,6 @@ public class FeedbackService {
 	}
 
 	public HashMap<String, Object> satifcationRate(String sessionId) {
-
 		if (auth.AuthUserBySessionId(sessionId)) {
 			HashMap<String, Object> satifcationRate = new HashMap<String, Object>();
 			List<Feedback> feedback = FeedbackRepository.findAll();
